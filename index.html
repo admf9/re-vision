@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Re-vision</title>
+  <link rel="stylesheet" href="styles.css">
+    <script src="definition.js"></script>
+</head>
+
+<body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import {
+      initializeApp
+    } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+    import {
+      getAnalytics
+    } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBIweN9ahax2zYPPxfqzCucAJc_c0eLeAU",
+      authDomain: "re-vision-21e26.firebaseapp.com",
+      projectId: "re-vision-21e26",
+      storageBucket: "re-vision-21e26.appspot.com",
+      messagingSenderId: "760616303165",
+      appId: "1:760616303165:web:884d05875aea460931c854",
+      measurementId: "G-1PERLQ39TQ"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <div class="container">
+    <h1>Re-vision</h1>
+    <div class="article-input">
+      <p>Paste your article below:</p>
+      <textarea class="textbox" placeholder="Enter text here"></textarea>
+    </div>
+    <div class="button-container">
+      <button class="button" id="definition-button" disabled>Definition</button>
+      <button class="button" id="summarize-button" disabled>Summarize</button>
+      <button class="button" id="save-button" disabled>Save</button>
+    </div>
+    <div>
+      <p>Output:</p>
+      <textarea class="output-box" placeholder="Output text here"></textarea>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
